@@ -15,7 +15,7 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 
             if (index + 1 === thirdIndex && secondIndex !== thirdIndex) {
                 [index, --firstIndex, --secondIndex].forEach(item => {
-                    preferences.splice(item, 1, null);
+                    preferences[item] = null;
                 });
                 loveTrianglesCount++;
             }
